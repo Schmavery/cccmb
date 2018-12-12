@@ -66,7 +66,7 @@ function showDialogue(acc, callback){
     };
     let audiofile = person + (((Math.random() * maxAudio) | 0) + 1);
     let audiotag = "<audio src='./assets/" + audiofile + ".m4a' autoplay ></audio>";
-    let imagetag = "<img src='./assets/" + person + ".png' width=80px style='float:left'></img>";
+    let imagetag = "<img src='./assets/" + person + ".png' width=80px height=80px style='float:left'></img>";
     let texttag = "<div style='font-size:150%'>" + text + "</div>";
     dialogue.innerHTML = audiotag + imagetag + texttag;
   } else {
