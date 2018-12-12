@@ -58,8 +58,17 @@ function showDialogue(acc, callback){
     clicker.onclick = () => showDialogue(rest, callback);
     clicker.style.display = "inline"
     dialogue.style.display = "inline";
-    let audiofile = person + (((Math.random() * 3) | 0) + 1);
-    dialogue.innerHTML = "<audio src='./assets/" + audiofile + ".m4a' autoplay></audio> <div>" + person + ": " + text + "</div>";
+    var maxAudio = 0;
+    switch (person) {
+      case "Mardy": maxAudio = 4;
+      case "Rik": maxAudio = 3;
+      case "Steelee": maxAudio = 2;
+    };
+    let audiofile = person + (((Math.random() * maxAudio) | 0) + 1);
+    let audiotag = "<audio src='./assets/" + audiofile + ".m4a' autoplay ></audio>";
+    let imagetag = "<img src='./assets/" + person + ".png' width=50px style='float:left'></img>";
+    let texttag = "<div style='font-size:150%'>" + text + "</div>";
+    dialogue.innerHTML = audiotag + imagetag + texttag;
   } else {
     clicker.onclick = null;
     clicker.style.display = "none"
