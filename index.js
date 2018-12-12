@@ -66,7 +66,7 @@ function showDialogue(acc, callback){
     };
     let audiofile = person + (((Math.random() * maxAudio) | 0) + 1);
     let audiotag = "<audio src='./assets/" + audiofile + ".m4a' autoplay ></audio>";
-    let imagetag = "<img src='./assets/" + person + ".png' width=50px style='float:left'></img>";
+    let imagetag = "<img src='./assets/" + person + ".png' width=80px style='float:left'></img>";
     let texttag = "<div style='font-size:150%'>" + text + "</div>";
     dialogue.innerHTML = audiotag + imagetag + texttag;
   } else {
@@ -96,6 +96,8 @@ function click(thing) {
                 ["Rik", "Thanks for playing guys"],
                 ["Mardy", "Yeah...."],
                 ["Rik", "And uhh.. don't do drugs or something."]
+                ["Mardy", "And stay in school!"],
+                ["Rik", "No Mardy, you idiot, weren't you -burp- listening earlier, don't waste your time in school."]
               ], () => {
                 gamestate = {
                   cash: false,
@@ -197,13 +199,13 @@ function click(thing) {
             gamestate.plumbus = true;
             showDialogue([
               ["Mardy", "Looks like Mr Steelee's key fits the spaceship!"],
-              ["Mardy", "Got the plumbus!."]
+              ["Mardy", "Got the plumbiss!."]
             ]);
             return setScene("driveway");
 
           } else {
             return showDialogue([
-              ["Mardy", "Looks like Rik's spaceship is locked. I can't get the plumbus in there."],
+              ["Mardy", "Looks like Rik's spaceship is locked. I can't get the plambus in there."],
               ["Mardy", "Maybe I can find a key somewhere."]
             ]);
           }
