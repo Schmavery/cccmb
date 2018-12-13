@@ -1,7 +1,7 @@
 var title = `
 <img src="./assets/title.jpg" usemap="#image-map">
 <map name="image-map">
-    <area target="" alt="start" title="start" coords="989,769,6,16" shape="rect">
+    <area target="" alt="start" title="start" coords="1000,700,0,0" shape="rect">
 </map>`;
 
 var yard = `
@@ -60,8 +60,8 @@ function showDialogue(acc, callback){
     dialogue.style.display = "inline";
     var maxAudio = 0;
     switch (person) {
-      case "Mardy": maxAudio = 4;
-      case "Rik": maxAudio = 3;
+      case "Mardy": maxAudio = 6;
+      case "Rik": maxAudio = 5;
       case "Steelee": maxAudio = 2;
     };
     let audiofile = person + (((Math.random() * maxAudio) | 0) + 1);
