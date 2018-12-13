@@ -60,9 +60,9 @@ function showDialogue(acc, callback){
     dialogue.style.display = "inline";
     var maxAudio = 0;
     switch (person) {
-      case "Mardy": maxAudio = 6;
-      case "Rik": maxAudio = 5;
-      case "Steelee": maxAudio = 2;
+      case "Mardy": maxAudio = 6; break;
+      case "Rik": maxAudio = 5; break;
+      case "Steelee": maxAudio = 2; break;
     };
     let audiofile = person + (((Math.random() * maxAudio) | 0) + 1);
     let audiotag = "<audio src='./assets/" + audiofile + ".m4a' autoplay ></audio>";
