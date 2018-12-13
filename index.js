@@ -94,8 +94,8 @@ function click(thing) {
               setScene("title");
               return showDialogue([
                 ["Rik", "Thanks for playing guys"],
-                ["Mardy", "Yeah I-I-I hope this was. Tune in maybe next week or something"],
-                ["Rik", "And uhh.. don't do drugs or something."]
+                ["Mardy", "Yeah I-I-I hope this was fun. Tune in maybe next week or something"],
+                ["Rik", "Haha yeah and uhh.. don't do drugs or something."]
                 ["Mardy", "And stay in school!"],
                 ["Rik", "No Mardy, you idiot, weren't you *burp* listening earlier, don't waste yo*burp*ur time in school."]
               ], () => {
@@ -150,9 +150,9 @@ function click(thing) {
         case "mardy":
           return showDialogue([
             ["Mardy", "Did you say 'plambuss chip cookies'?"],
-            ["Rik", ""]
+            ["Rik", "Yes and they're the best in the wooo*burp*ooorld baby!"]
           ]);
-        case "portal":
+        case "portal:
           return setScene("portal");
         case "key":
           return showDialogue([
@@ -160,7 +160,7 @@ function click(thing) {
           ]);
         case "flour":
           return showDialogue([
-            ["Rik", "*burp* Mardy, I don't need any flour."]
+            ["Rik", "*burp* Mardy stop this nonsense, I don't need any flour."]
           ]);
       };
       break;
@@ -171,19 +171,20 @@ function click(thing) {
         case "cash":
           if (gamestate.cash) {
             return showDialogue([
-              ["Mardy", "Oh look, some nice greples"],
-              ["Mardy", "But I already have some..."]
+              ["Mardy", "Mmmh maybe I could get just a few more..."],
+              ["Rik", "Wowowow Mardy that's super impolite in that uuu*burp*niverse, you can only steal once."]
             ]);
           } else {
             gamestate.cash = true;
             return showDialogue([
-              ["Mardy", "Oh look, some nice greples"],
-              ["Mardy", "I think some of these might come in handy"]
+              ["Mardy", "Oh look, a portal to a bank, how convenient. I'll take a couple greples."],
+              ["Rik", "Careful Mardy, in that universe people turn into giant bags of money when they die, so this is effectively a cemetery."]
             ]);
           }
         case "mardy":
           return showDialogue([
-            ["Mardy", "Sometimes the unexplicable weight of life makes me consider jumping head first into a portal and never come back."]
+            ["Mardy", "I feel like I'm not respected for efforts here."],
+            ["Rik", "Watch out Mardy, you're starting to sound like your dad."]
           ]);
       };
       break;
