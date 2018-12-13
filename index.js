@@ -152,7 +152,7 @@ function click(thing) {
             ["Mardy", "Did you say 'plambuss chip cookies'?"],
             ["Rik", "Yes and they're the best in the wooo*burp*ooorld baby!"]
           ]);
-        case "portal:
+        case "portal":
           return setScene("portal");
         case "key":
           return showDialogue([
