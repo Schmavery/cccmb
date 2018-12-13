@@ -183,7 +183,7 @@ function click(thing) {
           }
         case "mardy":
           return showDialogue([
-            ["Mardy", "I feel like I'm not respected for efforts here."],
+            ["Mardy", "I feel like I'm not respected for my efforts here."],
             ["Rik", "Watch out Mardy, you're starting to sound like your dad."]
           ]);
       };
