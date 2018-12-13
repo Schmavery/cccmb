@@ -94,10 +94,10 @@ function click(thing) {
               setScene("title");
               return showDialogue([
                 ["Rik", "Thanks for playing guys"],
-                ["Mardy", "Yeah...."],
+                ["Mardy", "Yeah I-I-I hope this was. Tune in maybe next week or something"],
                 ["Rik", "And uhh.. don't do drugs or something."]
                 ["Mardy", "And stay in school!"],
-                ["Rik", "No Mardy, you idiot, weren't you -burp- listening earlier, don't waste your time in school."]
+                ["Rik", "No Mardy, you idiot, weren't you *burp* listening earlier, don't waste yo*burp*ur time in school."]
               ], () => {
                 gamestate = {
                   cash: false,
@@ -132,34 +132,35 @@ function click(thing) {
         case "stealy":
           if (gamestate.key) {
             return showDialogue([
-              ["Steelee", "OOuee I don't have a key anymore..."]
+              ["Steelee", "Oh hey, we're done today's adventure, come back when you have more random things to buy."]
             ]);
           } else if (gamestate.cash){
             gamestate.key = true;
             return showDialogue([
-              ["Steelee", "It seems quiet and safe here, I'll give you this key for those greples..."],
-              ["Mardy", "Ok"],
-              ["Steelee", "Here you go!"]
+              ["Steelee", "It seems quiet and safe here, I'll give you this key for those 12 greples..."],
+              ["Mardy", "You have this weird improvisional tone when you speak but anyway here you go."],
+              ["Steelee", "Here's the key, hope you like it."]
             ]);
           } else {
             return showDialogue([
               ["Steelee", "Hey, I'm Steelee. I have some common objects, like such as this key."],
-              ["Steelee", "I want at least 12... breples for it."]
+              ["Steelee", "I want at least 12... greples for it."]
             ]);
           }
         case "mardy":
           return showDialogue([
-            ["Mardy", "Hi!"]
+            ["Mardy", "Did you say 'plambuss chip cookies'?"],
+            ["Rik", ""]
           ]);
         case "portal":
           return setScene("portal");
         case "key":
           return showDialogue([
-            ["Mardy", "Huh, looks like no keys..."]
+            ["Mardy", "Huh, looks like there are no keys in this key box of sorts."]
           ]);
         case "flour":
           return showDialogue([
-            ["Rik", "...Uhhh Mardy, I don't need any flour."]
+            ["Rik", "*burp* Mardy, I don't need any flour."]
           ]);
       };
       break;
@@ -182,7 +183,7 @@ function click(thing) {
           }
         case "mardy":
           return showDialogue([
-            ["Mardy", "Hi!"]
+            ["Mardy", "Sometimes the unexplicable weight of life makes me consider jumping head first into a portal and never come back."]
           ]);
       };
       break;
@@ -192,13 +193,13 @@ function click(thing) {
         case "lab": return setScene("lab")
         case "mardy":
           return showDialogue([
-            ["Mardy", "Hi!"]
+            ["Rik", "Hey stop touching yourself Mardy, eeeeeveryone can see you!"]
           ]);
         case "ship":
           if (gamestate.key) {
             gamestate.plumbus = true;
             showDialogue([
-              ["Mardy", "Looks like Mr Steelee's key fits the spaceship!"],
+              ["Mardy", "Looks like Mr Steelee's key fits the spaceship's keyhole!"],
               ["Mardy", "Got the plumbiss!."]
             ]);
             return setScene("driveway");
