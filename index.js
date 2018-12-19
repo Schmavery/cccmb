@@ -94,7 +94,7 @@ function click(thing) {
               setScene("title");
               return showDialogue([
                 ["Rik", "Thanks for playing guys"],
-                ["Mardy", "Yeah I-I-I hope this was fun. Tune in maybe next week or something"],
+                ["Mardy", "Yeah I-I-I hope this was fun. Tune in maybe next week I guess"],
                 ["Rik", "Haha yeah and uhh.. don't do drugs or something."],
                 ["Mardy", "And stay in school!"],
                 ["Rik", "No Mardy, you idiot, weren't you *burp* listening earlier, don't waste yo*burp*ur time in school."]
